@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="boardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2ndDentalGameBoard" translatesAutoresizingMaskIntoConstraints="NO" id="Rc4-Sl-afj">
+                                <rect key="frame" x="234" y="0.0" width="1222" height="834"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="deckOfCards" translatesAutoresizingMaskIntoConstraints="NO" id="u4h-Ov-r67">
+                                <rect key="frame" x="-45" y="13" width="441" height="324"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Your Player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-HQ-sWb">
+                                <rect key="frame" x="20" y="896" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKB-xZ-u1x">
+                                <rect key="frame" x="234" y="860" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="56W-TV-oyD">
+                                        <rect key="frame" x="14" y="-8" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueTooth" translatesAutoresizingMaskIntoConstraints="NO" id="wax-7i-wbw">
+                                        <rect key="frame" x="7" y="9" width="112" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGp-Cq-IKm">
+                                        <rect key="frame" x="26" y="90" width="75" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="changeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IIh-fx-0iP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pq0-bu-mao" appends="YES" id="tBW-ie-Bru"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oq-ix-ory">
+                                <rect key="frame" x="353" y="860" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ky-7w-nGD">
+                                        <rect key="frame" x="25" y="97" width="75" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="changeTappedTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZq-Rh-KAf"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snY-wB-e3K">
+                                        <rect key="frame" x="14" y="-13" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkTooth" translatesAutoresizingMaskIntoConstraints="NO" id="BUg-Px-Rsq">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jTw-jZ-h4b" appends="YES" id="OJl-6F-s1U"/>
+                                    <outletCollection property="gestureRecognizers" destination="qyY-Sp-iAS" appends="YES" id="o3j-WK-gGg"/>
+                                    <outletCollection property="gestureRecognizers" destination="NE2-lY-ZfD" appends="YES" id="wkO-Eh-jZk"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uls-g6-JO4">
+                                <rect key="frame" x="486" y="860" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STy-Xg-ruW">
+                                        <rect key="frame" x="25" y="105" width="75" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="changeTappedThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHy-R2-1xa"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9Q-A1-tpb">
+                                        <rect key="frame" x="14" y="-15" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redTooth" translatesAutoresizingMaskIntoConstraints="NO" id="Y1i-6J-Pth">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UBp-Dv-Kn7" appends="YES" id="Ddo-ir-7f1"/>
+                                    <outletCollection property="gestureRecognizers" destination="bwp-VN-4Zw" appends="YES" id="DgA-cW-UJ5"/>
+                                    <outletCollection property="gestureRecognizers" destination="FEd-31-5f3" appends="YES" id="ctQ-j4-8j6"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TmY-oi-0aN">
+                                <rect key="frame" x="619" y="860" width="125" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dv-0z-rjJ">
+                                        <rect key="frame" x="25" y="90" width="75" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="changeTappedFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8X-sZ-NmM"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJu-L4-N7B">
+                                        <rect key="frame" x="14" y="-15" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenTooth" translatesAutoresizingMaskIntoConstraints="NO" id="izt-ap-qhI">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8lv-RA-geA" appends="YES" id="eKY-H4-vGb"/>
+                                    <outletCollection property="gestureRecognizers" destination="h2J-df-6v9" appends="YES" id="Xjn-cX-WeS"/>
+                                    <outletCollection property="gestureRecognizers" destination="vR8-Q6-B7d" appends="YES" id="NXU-Rg-DNm"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-nw-bdh">
+                                <rect key="frame" x="130" y="356" width="68" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRD-Hu-F2h">
+                                <rect key="frame" x="1166" y="897" width="113" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Need Help?"/>
+                                <connections>
+                                    <segue destination="hXN-uW-dTy" kind="show" id="YcE-QM-z8O"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frontCard2" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-4K-cze">
+                                <rect key="frame" x="-89" y="304" width="528" height="527"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmf-RG-tIs">
+                                <rect key="frame" x="80" y="438" width="169" height="258"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Question" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-30-KT7">
+                                        <rect key="frame" x="8" y="29" width="161" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Answer" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="say-O5-alQ">
+                                        <rect key="frame" x="8" y="162" width="161" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-xH-h7Q">
+                                <rect key="frame" x="132" y="771" width="88" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.53010383319999999" green="0.90489782799999996" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Answer">
+                                    <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="31s-MO-Bwv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-F0-j5u">
+                                <rect key="frame" x="132" y="310" width="63" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.53010383316538201" green="0.90489782796057194" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Deck">
+                                    <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mI6-DO-4Ap"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-y3-y8H">
+                                <rect key="frame" x="752" y="798" width="272" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blr-uf-S6A">
+                                <rect key="frame" x="1028" y="894" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="roll dice"/>
+                                <connections>
+                                    <action selector="rollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wmo-rL-ub4"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qkv-1s-Thy">
+                                <rect key="frame" x="1198" y="973" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onAndOffSound:" destination="BYZ-38-t0r" eventType="valueChanged" id="npw-eO-DBD"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUa-fP-9d6">
+                                <rect key="frame" x="1175" y="854" width="95" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="About Us"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.70588237050000002" green="0.86666667460000002" blue="0.9098039269" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutUs" destination="wUa-fP-9d6" id="YdU-xN-I0z"/>
+                        <outlet property="cardView" destination="vmf-RG-tIs" id="mQh-VC-HvR"/>
+                        <outlet property="changeOutlet" destination="ZGp-Cq-IKm" id="AQQ-85-hzU"/>
+                        <outlet property="changeOutlet2" destination="2ky-7w-nGD" id="PVy-Lc-MIr"/>
+                        <outlet property="changeOutlet3" destination="Y1i-6J-Pth" id="2PA-tD-Ouo"/>
+                        <outlet property="changeOutlet4" destination="8Dv-0z-rjJ" id="Lqm-m1-lgc"/>
+                        <outlet property="diceRollImage" destination="CYh-y3-y8H" id="dOr-XJ-fjM"/>
+                        <outlet property="gameBoardImage" destination="Rc4-Sl-afj" id="DUQ-wC-gDj"/>
+                        <outlet property="imageView" destination="wax-7i-wbw" id="wEo-pu-7Ff"/>
+                        <outlet property="imageViewFour" destination="izt-ap-qhI" id="I0C-qW-4gX"/>
+                        <outlet property="imageViewThree" destination="Y1i-6J-Pth" id="nUa-4B-aT3"/>
+                        <outlet property="imageViewTwo" destination="BUg-Px-Rsq" id="WwN-Rn-AER"/>
+                        <outlet property="playerFourName" destination="bJu-L4-N7B" id="B52-EY-4Hf"/>
+                        <outlet property="playerFourView" destination="TmY-oi-0aN" id="60h-2y-wqT"/>
+                        <outlet property="playerName" destination="56W-TV-oyD" id="wn2-is-x0T"/>
+                        <outlet property="playerThreeName" destination="d9Q-A1-tpb" id="kt4-3L-4Ju"/>
+                        <outlet property="playerThreeView" destination="uls-g6-JO4" id="AjG-qb-ET4"/>
+                        <outlet property="playerTwoName" destination="snY-wB-e3K" id="nfg-m2-gqJ"/>
+                        <outlet property="playerTwoView" destination="5oq-ix-ory" id="a2C-s6-cWx"/>
+                        <outlet property="playerView" destination="56W-TV-oyD" id="G7c-ox-v10"/>
+                        <outlet property="textViewOne" destination="CDp-30-KT7" id="Dez-Ek-yZQ"/>
+                        <outlet property="textViewTwo" destination="say-O5-alQ" id="zP9-1R-pM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="pq0-bu-mao">
+                    <connections>
+                        <action selector="iconPanGest:" destination="BYZ-38-t0r" id="5Uy-So-UXu"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cx0-L8-NZL">
+                    <connections>
+                        <action selector="longPress:" destination="BYZ-38-t0r" id="dDp-jE-DbV"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="aLE-gi-wC8">
+                    <connections>
+                        <action selector="iconTapGest:" destination="BYZ-38-t0r" id="b3u-zc-3r3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="jTw-jZ-h4b">
+                    <connections>
+                        <action selector="panGest2:" destination="BYZ-38-t0r" id="c21-e9-LEj"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="qyY-Sp-iAS">
+                    <connections>
+                        <action selector="longPress2:" destination="BYZ-38-t0r" id="zmY-G0-RDP"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="NE2-lY-ZfD">
+                    <connections>
+                        <action selector="tapGest2:" destination="BYZ-38-t0r" id="PCH-jE-Ewa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="UBp-Dv-Kn7">
+                    <connections>
+                        <action selector="panGest3:" destination="BYZ-38-t0r" id="oW3-dB-jG6"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="bwp-VN-4Zw">
+                    <connections>
+                        <action selector="longPress3:" destination="BYZ-38-t0r" id="MlZ-zq-r5N"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="FEd-31-5f3"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8lv-RA-geA">
+                    <connections>
+                        <action selector="panGest4:" destination="BYZ-38-t0r" id="lbx-oM-3CT"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="h2J-df-6v9"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vR8-Q6-B7d">
+                    <connections>
+                        <action selector="longPress4:" destination="BYZ-38-t0r" id="nEQ-RK-afL"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="101.02489019033675" y="1.7578124999999998"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qzB-Px-VBF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GY3-HV-InX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="hXN-uW-dTy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hh7-6w-Sqe">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="944"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkv-7j-m6l">
+                                <rect key="frame" x="291" y="40" width="130" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkTooth" translatesAutoresizingMaskIntoConstraints="NO" id="flr-hg-wfi">
+                                <rect key="frame" x="124" y="147" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueTooth" translatesAutoresizingMaskIntoConstraints="NO" id="a41-0u-eD7">
+                                <rect key="frame" x="44" y="223" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenTooth" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-Zx-pc6">
+                                <rect key="frame" x="44" y="147" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redTooth" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-nc-6g2">
+                                <rect key="frame" x="124" y="223" width="104" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-pM-WiF">
+                                <rect key="frame" x="338" y="364" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Player selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-PR-K3v">
+                                <rect key="frame" x="91" y="335" width="173" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dice for how many spaces " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPd-J0-8IZ">
+                                <rect key="frame" x="328" y="297" width="260" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1..2..3..4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDR-u8-K61">
+                                <rect key="frame" x="437" y="525" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3sL-x0-cvK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mMw-QE-tpb"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="819.61932650073197" y="-83.203125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2ndDentalGameBoard" width="6889" height="5500"/>
+        <image name="blueTooth" width="2100" height="1500"/>
+        <image name="deckOfCards" width="2100" height="1500"/>
+        <image name="dice1" width="2048" height="2048"/>
+        <image name="frontCard2" width="2100" height="1500"/>
+        <image name="greenTooth" width="2100" height="1500"/>
+        <image name="pinkTooth" width="2100" height="1500"/>
+        <image name="redTooth" width="2100" height="1500"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
